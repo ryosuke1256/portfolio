@@ -1,17 +1,11 @@
-import Link from 'next/link';
+import Service from '../components/molecules/Service';
 
 export default function Home() {
   return (
     <>
-      <div>Hi,this is my portfolio site</div>
-      <br />
-      <Link href="about">
-        <a>about page</a>
-      </Link>
-      <br />
-      <Link href="contact">
-        <a>contact page</a>
-      </Link>
+      <p className="pb-2">Hi,this is my portfolio site</p>
+      <Service serviceName={'はぴたす'} url={'/images/hapitasu.png'} href={'https://todo-check-app.com/'} alt={'はぴたすのアイコン'} />
+      <Service serviceName={'シンプルクイズ'} url={'/images/simpleQuiz.png'} href={'https://quiz-react-typescript.web.app/'} alt={'シンプルクイズのアイコン'} />
     </>
   );
 }
