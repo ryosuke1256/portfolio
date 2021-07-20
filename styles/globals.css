@@ -21,3 +21,9 @@ a {
 #nprogress .bar {
   background: rgb(0, 225, 255) !important;
 }
+
+@media screen and (min-width: 640px) {
+  .paragraph {
+    padding-top: 1rem;
+  }
+}
