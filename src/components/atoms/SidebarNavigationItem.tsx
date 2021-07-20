@@ -7,7 +7,7 @@ type Props = {
 
 const SidebarNavigationItem: React.VFC<Props> = ({ ItemName, URL }: Props) => {
   return (
-    <div className="pl-8 sm:pl-0 sm:pt-4">
+    <div className="sm:pt-12">
       <Link href={URL}>
         <a>{ItemName}</a>
       </Link>

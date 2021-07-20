@@ -11,13 +11,11 @@ const Layout: React.FC = ({ children }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <div className="text-center">
-        <main className="inline-block pt-12">
-          <div className="flex flex-col sm:flex-row w-full text-center">
-            <SidebarNavigation />
-            <div className="flex flex-col">{children}</div>
-          </div>
-        </main>
+      <div className="pt-12 m-auto w-10/12 sm:w-7/12 md:w-7/12 lg:w-6/12 sm:max-w-md md:max-w-lg lg:max-w-xl">
+        <div className="flex flex-col sm:flex-row sm:justify-between w-full text-center">
+          <SidebarNavigation />
+          <div className="flex flex-col w-full sm:text-right">{children}</div>
+        </div>
       </div>
     </>
   );
