@@ -21,6 +21,7 @@
 | 言語           | TypeScript   |
 | フレームワーク | Next.js      |
 | スタイル       | Tailwind CSS |
+| ヘッドレス CMS | Contentful   |
 | その他         | PWA          |
 | デプロイ       | Vercel       |
 | ワークフロー   | GitHub Flow  |
