@@ -9,7 +9,7 @@ type Props = {
   alt: string;
 };
 
-const Service: React.VFC<Props> = ({ serviceName, url, href, alt }: Props) => {
+const Portfolio: React.VFC<Props> = ({ serviceName, url, href, alt }: Props) => {
   return (
     <div className="pb-14">
       <p className="text-xl font-semibold">{serviceName}</p>
@@ -21,4 +21,4 @@ const Service: React.VFC<Props> = ({ serviceName, url, href, alt }: Props) => {
   );
 };
 
-export default Service;
+export default Portfolio;

@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Header from '../components/organisms/Header';
+import Header from '../components/molecules/Header';
 import SidebarNavigation from '../components/organisms/SidebarNavigation';
 
 const Layout: React.FC = ({ children }) => {
@@ -11,7 +11,7 @@ const Layout: React.FC = ({ children }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <div className="pt-12 m-auto w-10/12 sm:w-9/12 md:w-8/12 lg:w-6/12 sm:max-w-md md:max-w-xl lg:max-w-xl">
+      <main className="pt-12 m-auto w-10/12 sm:w-9/12 md:w-8/12 lg:w-6/12 sm:max-w-md md:max-w-xl lg:max-w-xl">
         <div className="w-full text-center">
           <div className="sm:inline-block">
             <div className="flex flex-col sm:flex-row sm:justify-between w-full text-center">
@@ -20,7 +20,7 @@ const Layout: React.FC = ({ children }) => {
             </div>
           </div>
         </div>
-      </div>
+      </main>
     </>
   );
 };
