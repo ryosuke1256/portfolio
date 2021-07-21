@@ -3,7 +3,7 @@ import '../../styles/globals.css';
 import type { AppProps } from 'next/app';
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
-import Layout from '../Layout/Layout';
+import Layout from '../layout/Layout';
 
 NProgress.configure({ showSpinner: false, speed: 270, minimum: 0.08 });
 
