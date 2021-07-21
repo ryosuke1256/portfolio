@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { Text } from '../../constants/Text';
 
 type Props = {
   serviceName: string;
@@ -15,6 +16,7 @@ const Service: React.VFC<Props> = ({ serviceName, url, href, alt }: Props) => {
       <a href={href}>
         <Image src={url} alt={alt} className="cursor-pointer" width={150} height={150} />
       </a>
+      <p className="text-left pt-6">{Text.explain}</p>
     </div>
   );
 };
