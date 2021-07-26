@@ -16,7 +16,7 @@ const Portfolio: React.VFC<Props> = ({ portfolio }: Props) => {
       <p className="text-xl font-semibold pb-7">{title}</p>
       <Link href={link}>
         <a>
-          <Image src={`https://${url}`} alt={alt} className="cursor-pointer" width={150} height={150} />
+          <Image src={`https:${url}`} alt={alt} className="cursor-pointer" width={150} height={150} />
         </a>
       </Link>
       <p className="text-left pt-6 pb-3">{documentToReactComponents(explain)}</p>
