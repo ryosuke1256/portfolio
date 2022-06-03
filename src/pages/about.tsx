@@ -1,6 +1,6 @@
-import React from 'react';
+import type { FC } from 'react';
 
-const about: React.VFC = () => {
+const about: FC = () => {
   return <p>This page is about</p>;
 };
 

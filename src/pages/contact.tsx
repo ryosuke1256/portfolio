@@ -1,6 +1,6 @@
-import React from 'react';
+import type { FC } from 'react';
 
-const contact: React.VFC = () => {
+const contact: FC = () => {
   return <p>This page is contact</p>;
 };
 

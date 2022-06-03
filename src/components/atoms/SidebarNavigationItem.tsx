@@ -1,3 +1,4 @@
+import type { FC } from 'react';
 import Link from 'next/link';
 
 type Props = {
@@ -5,9 +6,9 @@ type Props = {
   URL: string;
 };
 
-const SidebarNavigationItem: React.VFC<Props> = ({ ItemName, URL }: Props) => {
+const SidebarNavigationItem: FC<Props> = ({ ItemName, URL }: Props) => {
   return (
-    <div className="sm:pt-12">
+    <div className='sm:pt-12'>
       <Link href={URL}>
         <a>{ItemName}</a>
       </Link>
