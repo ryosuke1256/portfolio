@@ -35,3 +35,5 @@ yarn-error.log*
 
 /public/workbox**
 /public/sw**
+
+tsconfig.tsbuildinfo

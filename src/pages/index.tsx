@@ -16,7 +16,7 @@ export const getStaticProps: GetStaticProps = async () => {
         portfolios: res.items,
       },
     };
-  } catch (error) {
+  } catch (error: any) {
     throw new Error(error.message);
   }
 };
