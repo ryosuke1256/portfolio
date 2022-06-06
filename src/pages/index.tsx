@@ -1,4 +1,4 @@
-import Portfolio from '../components/organisms/Portfolio';
+import { Portfolio } from '../components/organisms/Portfolio';
 import { createClient } from 'contentful';
 import { GetStaticProps } from 'next';
 import { Client } from '../types/index';

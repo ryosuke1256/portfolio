@@ -1,7 +1,7 @@
 import type { FC, ReactNode } from 'react';
 import Head from 'next/head';
-import Header from '../components/molecules/Header';
-import SidebarNavigation from '../components/organisms/SidebarNavigation';
+import { Header } from '../components/molecules/Header';
+import { SidebarNavigation } from '../components/organisms/SidebarNavigation';
 
 type Props = {
   children: ReactNode;

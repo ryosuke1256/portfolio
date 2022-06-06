@@ -7,7 +7,7 @@ type Props = {
   portfolio: any;
 };
 
-const Portfolio: FC<Props> = ({ portfolio }: Props) => {
+export const Portfolio: FC<Props> = ({ portfolio }: Props) => {
   const { title, link, image, alt, explain, technology } = portfolio.fields;
   const url = image.fields.file.url;
 
@@ -24,5 +24,3 @@ const Portfolio: FC<Props> = ({ portfolio }: Props) => {
     </div>
   );
 };
-
-export default Portfolio;
