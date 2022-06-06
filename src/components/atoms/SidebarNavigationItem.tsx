@@ -6,7 +6,7 @@ type Props = {
   URL: string;
 };
 
-const SidebarNavigationItem: FC<Props> = ({ ItemName, URL }: Props) => {
+export const SidebarNavigationItem: FC<Props> = ({ ItemName, URL }: Props) => {
   return (
     <div className='sm:pt-12'>
       <Link href={URL}>
@@ -15,4 +15,3 @@ const SidebarNavigationItem: FC<Props> = ({ ItemName, URL }: Props) => {
     </div>
   );
 };
-export default SidebarNavigationItem;

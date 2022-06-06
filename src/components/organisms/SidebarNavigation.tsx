@@ -1,7 +1,7 @@
 import type { FC } from 'react';
-import SidebarNavigationItem from '../atoms/SidebarNavigationItem';
+import { SidebarNavigationItem } from '../atoms/SidebarNavigationItem';
 
-const SidebarNavigation: FC = () => {
+export const SidebarNavigation: FC = () => {
   return (
     <nav className='flex flex-row sm:flex-col sm:h-full justify-around sm:justify-start pb-12 sm:pr-12 sm:pb-0'>
       <SidebarNavigationItem ItemName={'portfolio'} URL={'/'} />
@@ -10,5 +10,3 @@ const SidebarNavigation: FC = () => {
     </nav>
   );
 };
-
-export default SidebarNavigation;
