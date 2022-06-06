@@ -1,7 +1,8 @@
-import { Portfolio } from '../components/organisms/Portfolio';
+import { Portfolio } from '../components/organisms';
 import { createClient } from 'contentful';
 import { GetStaticProps } from 'next';
 import { Client } from '../types/index';
+import { PageLayout } from '../Layout';
 
 export const getStaticProps: GetStaticProps = async () => {
   const client = createClient({
@@ -25,12 +26,16 @@ type Props = {
   portfolios: object[];
 };
 
+// hタグデフォルトのスタイル合たってた方がいいな
+// TODO: エイリアス登録
+// TODO: Cotnentful型自動生成
+// TODO: getLayout
 export default function Home({ portfolios }: Props) {
   return (
-    <>
+    <PageLayout>
       {portfolios.map((portfolio: object, key) => (
         <Portfolio portfolio={portfolio} key={key} />
       ))}
-    </>
+    </PageLayout>
   );
 }

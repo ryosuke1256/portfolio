@@ -1,7 +1,12 @@
-import type { FC } from 'react';
+import type { NextPage } from 'next';
+import { PageLayout } from '../Layout';
 
-const about: FC = () => {
-  return <p>This page is about</p>;
+const About: NextPage = () => {
+  return (
+    <PageLayout>
+      <p>This page is about</p>;
+    </PageLayout>
+  );
 };
 
-export default about;
+export default About;

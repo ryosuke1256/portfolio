@@ -4,7 +4,7 @@ import React, { FC } from 'react';
 
 export const About: FC = () => {
   return (
-    <>
+    <div className='mt-80 mr-auto w-10/12'>
       <div>{`Hi! I'm Ryosuke👋,A software developer.`}</div>
       <h1>About</h1>
       {/* TODO: 自己紹介　 */}
@@ -13,7 +13,7 @@ export const About: FC = () => {
       <h1>Contact</h1>
       <section className='flex-row justify-between'>
         {/* TODO: src */}
-        <Link href={''}>
+        <Link href={'mailto:info&#64;engineerxx1245.gmail.com"'}>
           <a>
             <Image src='images/hoge.png' alt='Gmailのアイコン' />
           </a>
@@ -34,6 +34,6 @@ export const About: FC = () => {
           </a>
         </Link>
       </section>
-    </>
+    </div>
   );
 };
