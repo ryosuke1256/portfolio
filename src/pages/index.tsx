@@ -18,14 +18,13 @@ export const getStaticProps: GetStaticProps = async () => {
         portfolios: res.items,
       },
     };
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error: any) {
     throw new Error(error.message);
   }
 };
 
 type Props = {
-  // portfolios: object[];
   portfolios: Entry<IPortfoliosFields>[];
 };
 
@@ -34,6 +33,7 @@ type Props = {
 export default function Home({ portfolios }: Props) {
   return (
     <PageLayout>
+      <h1 className='text-2xl font-semibold'>Portfolios</h1>
       {portfolios.map((portfolio: Entry<IPortfoliosFields>, key: number) => (
         <Portfolio portfolio={portfolio} key={key} />
       ))}
