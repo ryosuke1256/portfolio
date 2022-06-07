@@ -1,8 +1,8 @@
-import { Portfolio } from '../components/organisms';
+import { Portfolio } from '~/components/organisms';
 import { createClient } from 'contentful';
 import { GetStaticProps } from 'next';
-import { Client } from '../types/index';
-import { PageLayout } from '../Layout';
+import { Client } from '~/types/index';
+import { PageLayout } from '~/Layout';
 
 export const getStaticProps: GetStaticProps = async () => {
   const client = createClient({
