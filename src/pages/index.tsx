@@ -1,8 +1,9 @@
 import { Portfolio } from '~/components/organisms';
-import { createClient } from 'contentful';
+import { createClient, Entry } from 'contentful';
 import { GetStaticProps } from 'next';
 import { Client } from '~/types/index';
 import { PageLayout } from '~/Layout';
+import type { IPortfoliosFields } from '../../@types/generated/contentful';
 
 export const getStaticProps: GetStaticProps = async () => {
   const client = createClient({
@@ -11,29 +12,29 @@ export const getStaticProps: GetStaticProps = async () => {
   } as Client);
 
   try {
-    const res = await client.getEntries({ content_type: 'portfolios' });
+    const res = await client.getEntries<IPortfoliosFields>({ content_type: 'portfolios' });
     return {
       props: {
         portfolios: res.items,
       },
     };
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error: any) {
     throw new Error(error.message);
   }
 };
 
 type Props = {
-  portfolios: object[];
+  // portfolios: object[];
+  portfolios: Entry<IPortfoliosFields>[];
 };
 
 // hタグデフォルトのスタイル合たってた方がいいな
-// TODO: エイリアス登録
-// TODO: Cotnentful型自動生成
 // TODO: getLayout
 export default function Home({ portfolios }: Props) {
   return (
     <PageLayout>
-      {portfolios.map((portfolio: object, key) => (
+      {portfolios.map((portfolio: Entry<IPortfoliosFields>, key: number) => (
         <Portfolio portfolio={portfolio} key={key} />
       ))}
     </PageLayout>
