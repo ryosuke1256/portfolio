@@ -54,7 +54,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "run-s lint type test:u"
+      "pre-push": "npm run-s lint type test:u"
     }
   }
 }
