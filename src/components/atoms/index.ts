@@ -1,2 +1,2 @@
-export { Button } from '../../stories/Button';
+export { Button } from './Button';
 export { SidebarNavigationItem } from './SidebarNavigationItem';
