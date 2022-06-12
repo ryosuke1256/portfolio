@@ -15,19 +15,22 @@ export const Portfolio: FC<Props> = ({ portfolio }: Props) => {
 
   return (
     <>
-      <div className='my-12 pb-14 flex flex-col items-center'>
-        <p className='text-xl font-semibold pb-7'>{title}</p>
+      {/* TODO: リファクタリング */}
+      {/* TODO: テキストと画像が揃ってない */}
+      {/* TODO: はぴたすリンクないんだから遷移できないように */}
+      <div className='my-12 pb-14 flex flex-col items-center md:w-1/2 md:pr-6 md:items-start md:pb-0'>
         {typeof link === 'string' ? (
           <Link href={link}>
-            <a>
-              <Image src={`https:${url}`} alt={alt} className='cursor-pointer' width={150} height={150} />
+            <a className='w-10/12 text-center rounded-3xl bg-white hover:scale-105 p-2 md:self-center hover:shadow-md '>
+              <Image src={`https:${url}`} alt={alt} className='cursor-pointer' layout='intrinsic' width={150} height={150} />
             </a>
           </Link>
         ) : (
           <Image src={`https:${url}`} alt={alt} className='cursor-pointer' width={150} height={150} />
         )}
-        <div className='text-center pt-6 pb-3'>{documentToReactComponents(explain)}</div>
-        <p>{technology}</p>
+        <h2 className='text-xl font-semibold pt-6'>{title}</h2>
+        <div className='text-center pt-6 pb-3 md:text-left'>{documentToReactComponents(explain)}</div>
+        <p className='text-center mb:text-left'>{technology}</p>
       </div>
     </>
   );

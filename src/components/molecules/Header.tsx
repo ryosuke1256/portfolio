@@ -1,9 +1,22 @@
+import Link from 'next/link';
 import type { FC } from 'react';
+import { HeaderTabs } from '~/components/molecules';
+import { TITLE } from '~/constants';
 
 export const Header: FC = () => {
   return (
-    <header className='h-16 w-full border-b text-black flex items-center text-xl'>
-      <div className='w-8/12 m-auto'>Ryosuke</div>
+    <header className='border-b px-20 pt-4'>
+      {/* FIXME:URL */}
+      {/* FIXME:タブインデックス　 useContext? */}
+      <Link href='/about'>
+        <a>
+          <div className='text-2xl pb-2 font-bold cursor-pointer'>{TITLE}</div>
+        </a>
+      </Link>
+      <div className='hidden md:block text-base '>
+        {/* FIXME:hrefsもっと良い書き方できるだろ */}
+        <HeaderTabs titles={['About', 'Works']} hrefs={['/about', '/']} />
+      </div>
     </header>
   );
 };

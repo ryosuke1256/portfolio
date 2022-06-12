@@ -1,0 +1,1 @@
+export { TITLE } from './app';

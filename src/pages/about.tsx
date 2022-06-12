@@ -1,12 +1,15 @@
 import type { NextPage } from 'next';
 import { PageLayout } from '~/Layout';
+import { About } from '~/components/organisms';
+import { TITLE } from '~/constants';
 
-const About: NextPage = () => {
+//FIXME: About, Rename
+const AboutPage: NextPage = () => {
   return (
-    <PageLayout>
-      <p>This page is about</p>;
+    <PageLayout pageTitle={TITLE}>
+      <About />
     </PageLayout>
   );
 };
 
-export default About;
+export default AboutPage;

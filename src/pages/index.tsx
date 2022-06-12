@@ -4,6 +4,7 @@ import { GetStaticProps } from 'next';
 import { Client } from '~/types/index';
 import { PageLayout } from '~/Layout';
 import type { IPortfoliosFields } from '../../@types/generated/contentful';
+import { TITLE } from '~/constants/app';
 
 export const getStaticProps: GetStaticProps = async () => {
   const client = createClient({
@@ -32,11 +33,13 @@ type Props = {
 // TODO: getLayout
 export default function Home({ portfolios }: Props) {
   return (
-    <PageLayout>
+    <PageLayout pageTitle={`Works - ${TITLE}`}>
       <h1 className='text-2xl font-semibold'>Portfolios</h1>
-      {portfolios.map((portfolio: Entry<IPortfoliosFields>, key: number) => (
-        <Portfolio portfolio={portfolio} key={key} />
-      ))}
+      <div className='flex flex-col flex-wrap md:flex-row'>
+        {portfolios.map((portfolio: Entry<IPortfoliosFields>, key: number) => (
+          <Portfolio portfolio={portfolio} key={key} />
+        ))}
+      </div>
     </PageLayout>
   );
 }
