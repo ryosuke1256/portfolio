@@ -2,10 +2,11 @@ import Link from 'next/link';
 import { useMemo, useContext, FC } from 'react';
 import clsx from 'clsx';
 import { ActiveIndexContext, Context } from '../organisms/Header';
+import type { TabTitle, Href } from '~/types';
 
 type HeaderTabProps = {
-  title: string;
-  href: string;
+  title: TabTitle;
+  href: Href;
   index: number;
 };
 

@@ -1,1 +1,1 @@
-export { TITLE } from './app';
+export * from './app';

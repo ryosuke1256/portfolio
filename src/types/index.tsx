@@ -1,4 +1,1 @@
-export type Client = {
-  space: string;
-  accessToken: string;
-};
+export type { TabTitle, Href } from './app';

@@ -10,6 +10,7 @@ class MyDocument extends Document {
     return (
       <Html lang='ja-JP' dir='ltr'>
         <Head>
+          {/* eslint-disable-next-line @next/next/no-title-in-document-head */}
           <title>{TITLE}</title>
           <meta name='description' content='This is my portfolio site' />
           <link rel='icon' href='/favicon.ico' />

@@ -1,10 +1,14 @@
-import { Portfolio } from '~/components/templates';
+import { Portfolio } from '~/components/organisms';
 import { createClient, Entry } from 'contentful';
 import { GetStaticProps } from 'next';
-import { Client } from '~/types/index';
 import { PageLayout } from '~/Layout';
 import type { IPortfoliosFields } from '../../@types/generated/contentful';
 import { TITLE } from '~/constants/app';
+
+type Client = {
+  space: string;
+  accessToken: string;
+};
 
 export const getStaticProps: GetStaticProps = async () => {
   const client = createClient({
@@ -29,8 +33,6 @@ type Props = {
   portfolios: Entry<IPortfoliosFields>[];
 };
 
-// hタグデフォルトのスタイル合たってた方がいいな
-// TODO: getLayout
 export default function Home({ portfolios }: Props) {
   return (
     <PageLayout pageTitle={`Works - ${TITLE}`}>

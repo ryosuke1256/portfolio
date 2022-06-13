@@ -1,16 +1,13 @@
 import { FC } from 'react';
 import { HeaderTab } from '~/components/atoms';
+import { TAB_TITLES, TAB_PATHS } from '~/constants';
+import { TabTitle } from '~/types';
 
-type HeaderTabsProps = {
-  titles: string[];
-  hrefs: string[];
-};
-
-export const HeaderTabs: FC<HeaderTabsProps> = ({ titles, hrefs }) => {
+export const HeaderTabs: FC = () => {
   return (
     <div className='hidden md:block text-base '>
-      {titles.map((title: string, index: number) => (
-        <HeaderTab key={index} title={title} href={hrefs[index]} index={index} />
+      {TAB_TITLES.map((title: TabTitle, index: number) => (
+        <HeaderTab key={index} title={title} href={TAB_PATHS[title]} index={index} />
       ))}
     </div>
   );

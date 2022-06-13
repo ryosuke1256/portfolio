@@ -45,12 +45,11 @@ export const Header: FC = () => {
       <header className='border-b px-20 pt-4'>
         <Link href='/'>
           <a onClick={() => dispatch && dispatch({ type: 'CHANGE', activeIndex: 0 })}>
-            <div className='text-2xl pb-2 font-bold cursor-pointer'>{TITLE}</div>
+            <div className='text-2xl pb-4 font-bold cursor-pointer md:pb-2'>{TITLE}</div>
           </a>
         </Link>
-        <div className='hidden md:block text-base '>
-          {/* FIXME:hrefsもっと良い書き方できるだろ */}
-          <HeaderTabs titles={['About', 'Works']} hrefs={['/', '/works']} />
+        <div className='hidden md:block'>
+          <HeaderTabs />
         </div>
       </header>
     </ActiveIndexContext.Provider>
