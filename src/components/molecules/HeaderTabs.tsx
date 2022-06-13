@@ -1,14 +1,12 @@
-import { FC, useState } from 'react';
-import { HeaderTab } from '../atoms';
+import { FC } from 'react';
+import { HeaderTab } from '~/components/atoms';
 
 type HeaderTabsProps = {
   titles: string[];
   hrefs: string[];
 };
 
-// FIXME: リロードずれる
 export const HeaderTabs: FC<HeaderTabsProps> = ({ titles, hrefs }) => {
-  
   return (
     <div className='hidden md:block text-base '>
       {titles.map((title: string, index: number) => (

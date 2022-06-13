@@ -1,7 +1,5 @@
-import Head from 'next/head';
 import type { FC, ReactNode } from 'react';
-import { Header } from '~/components/molecules';
-import { BottomNav } from '~/components/organisms';
+import { Header, BottomNav } from '~/components/organisms';
 
 type Props = {
   children: ReactNode;
