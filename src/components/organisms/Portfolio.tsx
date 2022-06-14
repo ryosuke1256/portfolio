@@ -24,7 +24,7 @@ export const Portfolio: FC<Props> = ({ portfolio }: Props) => {
   return (
     <>
       {/* TODO: 画像hoverした時に遷移できることを伝えるなら右上に矢印とか合ったほうがいい */}
-      <div className='my-12 pb-14 flex flex-col items-center md:w-1/2 md:pr-10 md:even:pr-0 md:even:pl-10 md:items-start md:pb-0'>
+      <div className='pb-12 flex flex-col items-center md:w-1/2 md:pr-10 md:even:pr-0 md:even:pl-10 md:items-start'>
         {typeof link === 'string' ? (
           <Link href={link}>
             <a target='_blank' rel='noopener noreferrer' className={clsx(imageClass, 'hover:scale-105 hover:shadow-md cursor-pointer')}>

@@ -1,1 +1,1 @@
-export type { TabTitle, Href } from './app';
+export type { PageTitle, PagePath } from './app';

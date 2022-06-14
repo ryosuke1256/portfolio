@@ -4,7 +4,7 @@ import Avatar from '/public/images/avatar.svg';
 import Book from '/public/images/book.svg';
 import clsx from 'clsx';
 import { TAB_TITLES, TAB_PATHS } from '~/constants';
-import type { TabTitle } from '~/types';
+import type { PageTitle } from '~/types';
 
 const image = {
   height: 32,
@@ -12,7 +12,7 @@ const image = {
 } as const;
 
 type BottomNavTab = {
-  title: TabTitle;
+  title: PageTitle;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   image: (isAvtive: boolean) => any;
   alt: string;
@@ -35,7 +35,6 @@ const bottomNavTabs: BottomNavTab[] = [
   },
 ];
 
-// TODO:デザイン修正
 export const BottomNav: FC = () => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 

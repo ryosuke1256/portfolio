@@ -36,7 +36,7 @@ type Props = {
 export default function Home({ portfolios }: Props) {
   return (
     <PageLayout pageTitle={`Works - ${TITLE}`}>
-      <h1 className='text-2xl font-semibold'>Portfolios</h1>
+      <h1 className='text-2xl font-semibold pb-14'>Portfolios</h1>
       <div className='flex flex-col flex-wrap md:flex-row'>
         {portfolios.map((portfolio: Entry<IPortfoliosFields>, key: number) => (
           <Portfolio portfolio={portfolio} key={key} />
