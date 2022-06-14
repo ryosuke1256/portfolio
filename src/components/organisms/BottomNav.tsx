@@ -1,10 +1,12 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import React, { FC, useState } from 'react';
 import Avatar from '/public/images/avatar.svg';
 import Book from '/public/images/book.svg';
 import clsx from 'clsx';
 import { TAB_TITLES, TAB_PATHS } from '~/constants';
 import type { PageTitle } from '~/types';
+import { getIndexFromPathName } from '~/utils';
 
 const image = {
   height: 32,
@@ -36,7 +38,8 @@ const bottomNavTabs: BottomNavTab[] = [
 ];
 
 export const BottomNav: FC = () => {
-  const [activeIndex, setActiveIndex] = useState<number>(0);
+  const router = useRouter();
+  const [activeIndex, setActiveIndex] = useState<number>(getIndexFromPathName(router.pathname));
 
   return (
     <nav className='fixed bottom-0 z-10 box-border bg-white flex justify-around border-t w-full py-2 md:hidden'>

@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import { useReducer, createContext, FC, Dispatch } from 'react';
 import { HeaderTabs } from '~/components/molecules';
 import { TITLE } from '~/constants';
+import { getIndexFromPathName } from '~/utils';
 
 type Action = {
   type: 'CHANGE';
@@ -22,17 +23,6 @@ const activeIndexReducer = (activeIndex: number, action: Action) => {
       return action.activeIndex;
     default:
       return activeIndex;
-  }
-};
-
-const getIndexFromPathName = (pathName: string) => {
-  switch (pathName) {
-    case '/':
-      return 0;
-    case '/works':
-      return 1;
-    default:
-      throw new Error('undefined path name');
   }
 };
 
