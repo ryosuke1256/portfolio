@@ -3,8 +3,6 @@ import { PageLayout } from '~/Layout';
 import { About } from '~/components/templates';
 import { TITLE } from '~/constants';
 
-// TODO:全体的にリファクタリング
-// デバイスだしわけ
 const AboutPage: NextPage = () => {
   return (
     <PageLayout pageTitle={TITLE}>

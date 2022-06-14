@@ -1,9 +1,10 @@
-import { Portfolio } from '~/components/organisms';
 import { createClient, Entry } from 'contentful';
 import { GetStaticProps } from 'next';
 import { PageLayout } from '~/Layout';
-import type { IPortfoliosFields } from '../../@types/generated/contentful';
 import { TITLE } from '~/constants/app';
+import { Works } from '~/components/templates';
+import type { IPortfoliosFields } from '../../@types/generated/contentful';
+import { Portfolio } from '~/components/organisms';
 
 type Client = {
   space: string;
@@ -29,19 +30,16 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 };
 
+export type Portfolio = Entry<IPortfoliosFields>;
+
 type Props = {
-  portfolios: Entry<IPortfoliosFields>[];
+  portfolios: Portfolio[];
 };
 
 export default function Home({ portfolios }: Props) {
   return (
     <PageLayout pageTitle={`Works - ${TITLE}`}>
-      <h1 className='text-2xl font-semibold pb-14'>Portfolios</h1>
-      <div className='flex flex-col flex-wrap md:flex-row'>
-        {portfolios.map((portfolio: Entry<IPortfoliosFields>, key: number) => (
-          <Portfolio portfolio={portfolio} key={key} />
-        ))}
-      </div>
+      <Works portfolios={portfolios}/>
     </PageLayout>
   );
 }

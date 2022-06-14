@@ -38,9 +38,7 @@ export const Header: FC = () => {
             <div className='text-2xl pb-4  font-bold cursor-pointer md:pb-2'>{TITLE}</div>
           </a>
         </Link>
-        <div className='hidden md:block'>
-          <HeaderTabs />
-        </div>
+        <HeaderTabs />
       </header>
     </ActiveIndexContext.Provider>
   );
