@@ -9,9 +9,7 @@ export const Layout: FC<Props> = ({ children }) => {
   return (
     <>
       <Header />
-      <div className='min-h-screen bg-primaryColor'>
-        <div className='pt-12'>{children}</div>
-      </div>
+      <div className='min-h-screen bg-primaryColor  mt-16'>{children}</div>
       <BottomNav />
     </>
   );

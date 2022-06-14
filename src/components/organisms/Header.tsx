@@ -42,10 +42,10 @@ export const Header: FC = () => {
 
   return (
     <ActiveIndexContext.Provider value={{ activeIndex, dispatch }}>
-      <header className='border-b px-20 pt-4'>
+      <header className='fixed top-0 z-10 bg-white border-b w-full box-border px-20 pt-4'>
         <Link href='/'>
           <a onClick={() => dispatch && dispatch({ type: 'CHANGE', activeIndex: 0 })}>
-            <div className='text-2xl pb-4 font-bold cursor-pointer md:pb-2'>{TITLE}</div>
+            <div className='text-2xl pb-4  font-bold cursor-pointer md:pb-2'>{TITLE}</div>
           </a>
         </Link>
         <div className='hidden md:block'>
