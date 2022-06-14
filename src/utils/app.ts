@@ -5,6 +5,6 @@ export const getIndexFromPathName = (pathName: string) => {
     case '/works':
       return 1;
     default:
-      throw new Error('undefined path name');
+      return 9999;
   }
 };
