@@ -9,7 +9,7 @@ export const Layout: FC<Props> = ({ children }) => {
   return (
     <>
       <Header />
-      <div className='min-h-screen bg-primaryColor  mt-16'>{children}</div>
+      <div className='min-h-screen bg-primaryColor  mt-16 md:mt-28'>{children}</div>
       <BottomNav />
     </>
   );

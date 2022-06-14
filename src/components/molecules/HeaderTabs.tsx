@@ -5,10 +5,10 @@ import { TabTitle } from '~/types';
 
 export const HeaderTabs: FC = () => {
   return (
-    <div className='hidden md:block text-base '>
+    <nav className='hidden md:block text-base '>
       {TAB_TITLES.map((title: TabTitle, index: number) => (
         <HeaderTab key={index} title={title} href={TAB_PATHS[title]} index={index} />
       ))}
-    </div>
+    </nav>
   );
 };

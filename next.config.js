@@ -14,4 +14,11 @@ https: module.exports = withPWA({
     domains: ['images.ctfassets.net'],
   },
   reactStrictMode: true,
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
+    });
+    return config;
+  },
 });
