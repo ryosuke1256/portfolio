@@ -1,12 +1,11 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-import React, { FC, useState } from 'react';
+import React, { FC, useContext } from 'react';
 import Avatar from '/public/images/avatar.svg';
 import Book from '/public/images/book.svg';
 import clsx from 'clsx';
 import { TAB_TITLES, TAB_PATHS } from '~/constants';
 import type { PageTitle } from '~/types';
-import { getIndexFromPathName } from '~/utils';
+import { ActiveIndexContext, Context } from '../ContextProvider';
 
 const image = {
   height: 32,
@@ -35,15 +34,14 @@ const bottomNavTabs: BottomNavTab[] = [
 ];
 
 export const BottomNav: FC = () => {
-  const router = useRouter();
-  const [activeIndex, setActiveIndex] = useState<number>(getIndexFromPathName(router.pathname));
+  const { activeIndex, dispatch } = useContext<Context>(ActiveIndexContext);
 
   return (
     <nav className='fixed bottom-0 z-10 box-border bg-white flex justify-around border-t w-full py-2 md:hidden'>
       {bottomNavTabs.map((tab: BottomNavTab, index: number) => {
         return (
           <Link href={TAB_PATHS[tab.title]} key={index}>
-            <a className='flex flex-col items-center' onClick={() => setActiveIndex(index)}>
+            <a className='flex flex-col items-center' onClick={() => dispatch && dispatch({ type: 'CHANGE', activeIndex: index })}>
               {tab.image(activeIndex === index)}
               <p className={clsx('text-xs', activeIndex === index ? 'text-blue-400' : '')}>{tab.title}</p>
             </a>
