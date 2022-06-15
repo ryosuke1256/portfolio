@@ -1,4 +1,1 @@
-export type Client = {
-  space: string;
-  accessToken: string;
-};
+export type { PageTitle, PagePath } from './app';

@@ -21,3 +21,7 @@ a {
 #nprogress .bar {
   background: rgb(0, 225, 255) !important;
 }
+
+.typed-cursor  {
+  color: 	rgb(96 165 250);
+}

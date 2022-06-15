@@ -10,17 +10,23 @@
     "type": "tsc --noEmit",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
+    "contentful-ts-codegen": "contentful-typescript-codegen --output @types/generated/contentful.d.ts",
     "prepare": "husky install",
     "staged": "run-s lint type"
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.12.1",
-    "contentful": "^9.1.31",
+    "clsx": "^1.1.1",
+    "contentful": "^9.1.32",
+    "contentful-management": "^10.6.2",
+    "contentful-typescript-codegen": "^3.2.3",
+    "dotenv": "^16.0.1",
     "next": "12.1.6",
     "next-pwa": "^5.5.2",
     "nprogress": "^0.2.0",
     "react": "18.1.0",
-    "react-dom": "18.1.0"
+    "react-dom": "18.1.0",
+    "react-typed": "^1.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.18.2",
@@ -32,9 +38,12 @@
     "@storybook/manager-webpack4": "^6.5.7",
     "@storybook/react": "^6.5.7",
     "@storybook/testing-library": "^0.0.11",
+    "@svgr/webpack": "^6.2.1",
     "@tailwindcss/postcss7-compat": "^2.2.17",
     "@types/nprogress": "^0.2.0",
     "@types/react": "18.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
     "autoprefixer": "^9",
     "babel-loader": "^8.2.5",
     "eslint": "8.16.0",
