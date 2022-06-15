@@ -19,7 +19,7 @@ export const HeaderTab: FC<HeaderTabProps> = ({ title, href, index }) => {
   return (
     <Link href={href}>
       <a onClick={() => dispatch && dispatch({ type: 'CHANGE', activeIndex: index })}>
-        <p className={clsx('p-3 mr-2 inline-block cursor-pointer text-lg hover:opacity-60', activeClasses)}>{title}</p>
+        <p className={clsx('p-3 mr-2 inline-block cursor-pointer text-lg font-medium hover:opacity-60', activeClasses)}>{title}</p>
       </a>
     </Link>
   );
