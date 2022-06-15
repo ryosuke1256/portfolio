@@ -36,10 +36,10 @@ type Props = {
   portfolios: Portfolio[];
 };
 
-export default function Home({ portfolios }: Props) {
+export default function WorksPage({ portfolios }: Props) {
   return (
     <PageLayout pageTitle={`Works - ${TITLE}`}>
-      <Works portfolios={portfolios}/>
+      <Works portfolios={portfolios} />
     </PageLayout>
   );
 }

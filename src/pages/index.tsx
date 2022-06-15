@@ -3,7 +3,7 @@ import { PageLayout } from '~/Layout';
 import { About } from '~/components/templates';
 import { TITLE } from '~/constants';
 
-const AboutPage: NextPage = () => {
+const Home: NextPage = () => {
   return (
     <PageLayout pageTitle={TITLE}>
       <About />
@@ -11,4 +11,4 @@ const AboutPage: NextPage = () => {
   );
 };
 
-export default AboutPage;
+export default Home;
