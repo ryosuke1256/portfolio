@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import React, { FC } from 'react';
 import clsx from 'clsx';
+import Typed from 'react-typed';
 
 const section = {
   title: 'text-2xl font-semibold',
@@ -11,10 +12,12 @@ const section = {
 export const About: FC = () => {
   return (
     <>
-      {/* TODO:タイピングアニメーション */}
-      <div className='text-3xl tracking-wider font-semibold leading-normal'>
-        {`Hi! I'm Ryosuke👋,`}
-        <br />A software developer.
+      <div className='h-28'>
+        <Typed
+          className='whitespace-pre-wrap text-3xl tracking-wider font-semibold leading-relaxed md:text-4xl md:leading-relaxed md:font-bold'
+          strings={[`Hi! I'm Ryosuke👋,\nA software developer.`]}
+          typeSpeed={45}
+        />
       </div>
       <h1 className={clsx(section.title, 'pt-14')}>About</h1>
       <p className={section.paragraph}>
@@ -44,27 +47,27 @@ const images = [
     target: '_self',
     rel: '',
     src: '/images/gmail.svg',
-    alt: 'Gmailのアイコン',
+    alt: 'Gmail',
   },
   {
     href: 'https://github.com/ryosuke1256',
     target: '_blank',
     rel: 'noopener noreferrer',
     src: '/images/github.png',
-    alt: 'GitHubのアイコン',
+    alt: 'GitHub',
   },
   {
     href: 'https://zenn.dev/reactlover',
     target: '_blank',
     rel: 'noopener noreferrer',
     src: '/images/zenn.svg',
-    alt: 'Zennのアイコン',
+    alt: 'Zenn',
   },
   {
     href: 'https://qiita.com/e8750520',
     target: '_blank',
     rel: 'noopener noreferrer',
     src: '/images/qiita.png',
-    alt: 'Qiitaのアイコン',
+    alt: 'Qiita',
   },
 ] as const;

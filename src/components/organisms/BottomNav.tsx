@@ -17,7 +17,6 @@ type BottomNavTab = {
   title: PageTitle;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   image: (isAvtive: boolean) => any;
-  alt: string;
 };
 
 const bottomNavTabs: BottomNavTab[] = [
@@ -26,14 +25,12 @@ const bottomNavTabs: BottomNavTab[] = [
     image(isActive: boolean) {
       return <Avatar fill={isActive ? 'rgba(96, 165, 250)' : '#000'} height={image.height} width={image.width} />;
     },
-    alt: `${TAB_TITLES[0]}ページ`,
   },
   {
     title: TAB_TITLES[1],
     image(isActive: boolean) {
       return <Book fill={isActive ? 'rgba(96, 165, 250)' : '#000'} height={image.height} width={image.width} />;
     },
-    alt: `${TAB_TITLES[1]}ページ`,
   },
 ];
 
