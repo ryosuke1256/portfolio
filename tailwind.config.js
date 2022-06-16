@@ -10,6 +10,12 @@ module.exports = {
         primaryColor: '#EEF6F9',
         customColor: colors.red,
       },
+      fontSize: {
+        '2.5xl': ['1.75rem', '1.9rem'],
+      },
+      screens: {
+        xsm: '305px',
+      },
     },
   },
   variants: {

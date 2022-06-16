@@ -12,9 +12,9 @@ const section = {
 export const About: FC = () => {
   return (
     <>
-      <div className='h-28'>
+      <div className='h-auto xsm:h-24 md:h-28'>
         <Typed
-          className='whitespace-pre-wrap text-3xl tracking-wider font-semibold leading-relaxed md:text-4xl md:leading-relaxed md:font-bold'
+          className='whitespace-pre-wrap text-2.5xl tracking-wider font-semibold leading-relaxed md:text-4xl md:leading-relaxed md:font-bold'
           strings={[`Hi! I'm Ryosuke👋,\nA software developer.`]}
           typeSpeed={45}
         />
