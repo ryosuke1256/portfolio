@@ -74,4 +74,11 @@ const images = [
     src: '/images/qiita.png',
     alt: 'Qiita',
   },
+  {
+    href: 'https://koeru.blog/',
+    target: '_blank',
+    rel: 'noopener noreferrer',
+    src: '/images/blog.png',
+    alt: 'MyBlog',
+  },
 ] as const;
