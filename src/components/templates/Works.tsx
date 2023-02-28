@@ -10,7 +10,6 @@ export const Works: FC<WorksProps> = ({ portfolios }) => {
   return (
     <>
       <h1 className='text-2xl font-semibold pb-14'>Portfolios</h1>
-      {''}
       <div className='flex flex-col flex-wrap md:flex-row'>
         {portfolios.map((portfolio: PortfolioType) => (
           <Portfolio portfolio={portfolio} key={portfolio.sys.createdAt} />
